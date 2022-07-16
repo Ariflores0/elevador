@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Ascensor en JavaScript</title>
+<script type="text/javascript">
+y= -92; //y es la coordenada vertical arriba-abajo
+function mover(dir)
+{
+switch (dir.keyCode)
+{
+//subir
+case 38:
+y-= 70;
+document.getElementById("imagen").style.top= String(y) + "px";
+
+break;
+//bajar
+case 40:
+y+= 30;
+document.getElementById("imagen").style.top= String(y) + "px";
+break;
+
+}
+}
+</script>
+</head>
+<body onkeyup="mover(event);">
+<img src="https://th.bing.com/th/id/R.721b82b7bed412b547bb6a2ab10ac523?rik=Xq8KMNAQGkEpeg&pid=ImgRaw&r=0"/>
+<img src="https://th.bing.com/th/id/OIP.TfcH_OJ4PlXfG7qL03sZigHaHa?w=208&h=208&c=7&r=0&o=5&dpr=1.1&pid=1.7" id="imagen" style="position: relative; left:-189px; top:-57px;" />
+</body>
+</html>
